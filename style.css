@@ -1,0 +1,557 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff7f8;
+    color: #3d252b;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 22px;
+    position: relative;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 180, 195, .35), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(255, 210, 220, .4), transparent 30%),
+        linear-gradient(135deg, #fff8fa, #ffe9ee);
+}
+
+.hero-content {
+    max-width: 650px;
+    animation: fadeUp 1.2s ease;
+}
+
+.small-text {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #a86a78;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(52px, 11vw, 100px);
+    line-height: .95;
+    font-weight: 400;
+    color: #542b34;
+}
+
+.hero h1 span {
+    color: #d95773;
+}
+
+.hero-description {
+    margin: 30px auto;
+    max-width: 450px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #76545c;
+}
+
+.start-btn {
+    border: none;
+    padding: 15px 28px;
+    border-radius: 50px;
+    background: #d95773;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(217, 87, 115, .25);
+    transition: .3s ease;
+}
+
+.start-btn:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+#mainContent {
+    display: none;
+}
+
+.section {
+    max-width: 750px;
+    margin: auto;
+    padding: 110px 25px;
+    text-align: center;
+}
+
+.label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #c05a70;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.section h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(40px, 8vw, 65px);
+    font-weight: 400;
+    color: #542b34;
+    margin-bottom: 30px;
+}
+
+.section p {
+    font-size: 15px;
+    line-height: 2;
+    color: #73565d;
+    margin-bottom: 17px;
+}
+
+
+/* ================================
+   PHOTO
+================================ */
+
+.photo-section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.photo-card {
+    width: min(85vw, 420px);
+    margin: auto;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 20px 50px rgba(83, 39, 49, .15);
+    transform: rotate(0deg);
+    transition: .4s ease;
+}
+
+.photo-card:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.rotate-left {
+    transform: rotate(-3deg);
+}
+
+.rotate-right {
+    transform: rotate(3deg);
+}
+
+.photo-caption {
+    margin-top: 25px;
+    color: #93636e;
+    font-size: 13px;
+    font-style: italic;
+}
+
+
+/* ================================
+   LETTER
+================================ */
+
+.letter {
+    background: #fff;
+    max-width: 900px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 90px 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 60px rgba(100, 50, 60, .08);
+}
+
+.letter-text {
+    max-width: 650px;
+    margin: auto;
+}
+
+.letter-text p {
+    margin-bottom: 25px;
+}
+
+.letter-text strong {
+    color: #d95773;
+    font-weight: 700;
+}
+
+
+/* ================================
+   GAME CARD
+================================ */
+
+.game-section {
+    padding: 100px 20px;
+    background: #542b34;
+    color: white;
+}
+
+.game-card {
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+}
+
+.game-icon {
+    font-size: 55px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.game-card .label {
+    color: #ffb6c5;
+}
+
+.game-card h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(45px, 9vw, 70px);
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.game-card p {
+    color: #f5dce1;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.game-card h3 {
+    margin-top: 25px;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #fff;
+}
+
+
+/* ================================
+   REASONS
+================================ */
+
+.reason-list {
+    max-width: 650px;
+    margin: 45px auto 0;
+    text-align: left;
+}
+
+.reason {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid #f0d9de;
+}
+
+.reason span {
+    color: #d95773;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.reason p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* ================================
+   PROMISE
+================================ */
+
+.promise {
+    max-width: 850px;
+}
+
+.promise-box {
+    padding: 70px 30px;
+    border-radius: 30px;
+    background: #ffe9ee;
+    box-shadow: inset 0 0 0 1px rgba(217, 87, 115, .08);
+}
+
+.promise-box h2 {
+    margin-bottom: 20px;
+}
+
+
+/* ================================
+   FINAL
+================================ */
+
+.final-section {
+    min-height: 100vh;
+    padding: 100px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 50% 30%, rgba(255, 170, 190, .25), transparent 30%),
+        #fff1f4;
+}
+
+.final-content {
+    max-width: 650px;
+}
+
+.big-heart {
+    display: block;
+    font-size: 70px;
+    margin-bottom: 20px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.final-section h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(45px, 9vw, 75px);
+    font-weight: 400;
+    color: #542b34;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.final-section p {
+    color: #76545c;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.final-section h3 {
+    font-family: "DM Serif Display", serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: #d95773;
+    margin: 25px 0;
+}
+
+.final-small {
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.choice-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.choice-buttons button {
+    border: none;
+    padding: 14px 23px;
+    border-radius: 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.forgive-btn {
+    background: #d95773;
+    color: white;
+    box-shadow: 0 10px 25px rgba(217, 87, 115, .25);
+}
+
+.forgive-btn:hover {
+    transform: translateY(-3px);
+}
+
+.angry-btn {
+    background: white;
+    color: #8b5c65;
+    border: 1px solid #ead1d6 !important;
+}
+
+.hidden-message {
+    display: none;
+    margin-top: 45px;
+    padding: 35px 25px;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0 15px 40px rgba(100, 50, 60, .1);
+    animation: fadeUp .7s ease;
+}
+
+.hidden-message h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hidden-message span {
+    display: block;
+    color: #d95773;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 45px 20px;
+    text-align: center;
+    background: #542b34;
+    color: #f8dce2;
+}
+
+footer p {
+    font-size: 11px;
+    letter-spacing: .5px;
+    margin: 6px;
+}
+
+
+/* ================================
+   FLOATING HEARTS
+================================ */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 18px;
+    pointer-events: none;
+    z-index: 999;
+    animation: floatHeart 5s linear forwards;
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+@keyframes floatHeart {
+
+    0% {
+        opacity: 0;
+        transform: translateY(0) rotate(0deg);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-110vh) rotate(360deg);
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .section {
+        padding: 80px 22px;
+    }
+
+    .photo-section {
+        padding: 50px 15px;
+    }
+
+    .photo-card img {
+        height: 430px;
+    }
+
+    .letter {
+        margin-left: 15px;
+        margin-right: 15px;
+        border-radius: 20px;
+        padding: 70px 22px;
+    }
+
+    .game-section {
+        padding: 80px 22px;
+    }
+
+    .reason {
+        gap: 13px;
+    }
+
+    .promise-box {
+        padding: 55px 22px;
+    }
+
+    .choice-buttons {
+        flex-direction: column;
+    }
+
+    .choice-buttons button {
+        width: 220px;
+    }
+
+      }
